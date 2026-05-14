@@ -1,0 +1,150 @@
+/* ========================================
+   OneLight 主题 - VitePress 适配版本
+   ======================================== */
+
+/* ---------------->> 基础样式 <<---------------- */
+@import './onelight/style/font.css';
+@import './onelight/style/table.css';
+@import './onelight/style/mermaid.css';
+@import './onelight/style/kbd/kbd.css';
+
+/* ---------------->> 标题样式 <<---------------- */
+@import './onelight/style/title/title-colorful.css';
+
+/* ---------------->> 列表样式 <<---------------- */
+@import './onelight/style/list/list.css';
+
+/* ---------------->> 引用块样式 <<---------------- */
+@import './onelight/style/blockquote/blockquote2.css';
+
+/* ---------------->> VitePress 适配样式 <<---------------- */
+@import './onelight/style/vitepress-adapt.css';
+
+/* ---------------->> 背景效果（星空 + 装饰图片）<<---------------- */
+@import './onelight/style/vitepress-background.css';
+
+/* -------------------------------------------------------- */
+/* CSS 变量定义 */
+/* -------------------------------------------------------- */
+:root {
+    --bg-color: #f2f2f2;
+    --code-bg-color: #282c34;
+    --text-color: black;
+    --primary-btn-text-color: #fff;
+    --active-file-bg-color: #eee;
+    --window-border: 1px solid var(--active-file-bg-color);
+    --active-file-text-color: inherit;
+    --active-file-border-color: var(--main-red);
+    --side-bar-bg-color: var(--bg-color);
+    --item-hover-bg-color: hsla(0, 0%, 90%, .59);
+    --item-hover-text-color: var(--main-red);
+    --monospace: monospace;
+    --select-text-font-color: white !important;
+    --select-text-bg-color: #3266D0;
+    --side-bar-menu-active-tint: var(--main-green);
+    --outline-color: #a5a5a5;
+    --tb-border-color: #e8e8e8;
+    
+    /* ---------------->> 主题色 <<---------------- */
+    --theme-color: #166ff3;
+    --main-red: #ff6b6b;
+    --main-green: #2ed573;
+    --main-purple: #c94ae9;
+    --main-yellow: #f9b03d;
+    --light-color: #b2b2b2;
+    --theme-light-color: white;
+    --code-bg-color: #282c34;
+    --code-bg-color-light: #3d404e;
+    --code-bg-color-active: #414855;
+    --border-color: var(--theme-color);
+    --border: solid 0.5px var(--theme-color)94;
+    
+    /* ---------------->> 悬浮 <<---------------- */
+    --item-bg-color-red: rgb(from var(--main-red) r g b / 0.22);
+    --item-bg-color-blue: rgb(from var(--theme-color) r g b / 0.26);
+    
+    /* ---------------->> 阴影 <<---------------- */
+    --box-shadow: 0px 4px 4px rgba(0, 0, 0, .1);
+    --box-shadow-large: 0 8px 15px rgba(0, 0, 0, .3);
+    --drop-shadow: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.3));
+    --brightness: brightness(1);
+    
+    /* ---------------->> 过渡 <<---------------- */
+    --transition: box-shadow 0.3s ease, transform 0.3s ease;
+    --bg-transition: background-color 0.5s ease;
+    
+    /* ---------------->> 左到右透明渐变色 <<---------------- */
+    --gradient-color: linear-gradient(to right, var(--theme-light-color), rgba(255, 255, 255, 0));
+    
+    /* ---------------->> 圆角 <<---------------- */
+    --radius-small: 5px;
+    --radius-large: 10px;
+    --radius-xlarge: 15px;
+    
+    /* ---------------->> 云母效果 <<---------------- */
+    --mica-bg: rgba(255, 255, 255, 0.65);
+    --mica-blur: blur(12px) saturate(1.3);
+    --mica-border: 1px solid rgba(255, 255, 255, 0.15);
+    --mica-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    --mica-transition: background-color 0.5s ease, box-shadow 0.5s ease;
+    
+    /* ---------------->> Mermaid 图表 <<---------------- */
+    --mermaid-theme: default;
+    --mermaid-font-family: var(--main-font-family), "trebuchet ms", verdana, arial, sans-serif;
+    --mermaid-sequence-numbers: on;
+    --mermaid-flowchart-curve: linear;
+    --mermaid--gantt-left-padding: 75;
+    --sequence-theme: hand;
+}
+
+/* -------------------------------------------------------- */
+/* 暗色模式变量 */
+/* -------------------------------------------------------- */
+.dark {
+    --bg-color: #1e1e1e;
+    --theme-light-color: #2e2e2e;
+    --mica-bg: rgba(30, 30, 30, 0.65);
+    --item-hover-bg-color: hsla(0, 0%, 20%, .59);
+    --gradient-color: linear-gradient(to right, var(--theme-light-color), rgba(46, 46, 46, 0));
+}
+
+/* -------------------------------------------------------- */
+/* VitePress 特定优化 */
+/* -------------------------------------------------------- */
+
+/* 代码高亮主题适配 */
+.vp-doc [class*='language-'] {
+    border-radius: var(--radius-small);
+    box-shadow: var(--box-shadow);
+}
+
+.vp-doc [class*='language-'] code {
+    font-family: var(--main-font-family);
+}
+
+/* 行号样式 */
+.vp-doc .line-numbers {
+    padding-left: 3.5rem;
+}
+
+.vp-doc .line-numbers::before {
+    border-right: 1px solid var(--border-color);
+}
+
+/* 语言标识 */
+.vp-doc [class*='language-']::before {
+    color: var(--light-color);
+    font-size: 0.75rem;
+    font-family: var(--main-font-family);
+}
+
+/* 复制按钮 */
+.vp-doc .vp-copy {
+    border-radius: var(--radius-small);
+    transition: var(--transition);
+}
+
+.vp-doc .vp-copy:hover {
+    background: var(--item-bg-color-blue);
+}

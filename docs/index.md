@@ -2,16 +2,13 @@
 layout: home
 
 hero:
-  name: "Skyang 八股笔记"
-  text: "记录学习，沉淀知识"
-  tagline: 系统整理技术笔记，构建完整知识体系
-  image:
-    src: /logo.svg
-    alt: Logo
+  name: "Skyang 懒虫笔记"
+  text: "自律第一天"
+  tagline: 自己记录的笔记，仅自用，食用中毒概不负责
   actions:
     - theme: brand
       text: 开始阅读
-      link: /chapter1/Agent
+      link: /
     - theme: alt
       text: GitHub
       link: https://github.com/

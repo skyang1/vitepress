@@ -1,0 +1,266 @@
+/* VitePress 适配样式 - 将 Typora 选择器映射到 VitePress */
+
+/* ---------------->> 主内容区域 <<---------------- */
+.vp-doc {
+    letter-spacing: 0;
+    text-align: left;
+}
+
+/* ---------------->> 段落 <<---------------- */
+.vp-doc p {
+    padding: 5px;
+    margin: 0;
+    line-height: 26px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+}
+
+.vp-doc p:not(:has(img)):hover {
+    box-shadow: var(--box-shadow);
+    border-radius: var(--radius-large);
+    background: var(--theme-light-color);
+}
+
+/* ---------------->> 粗体 <<---------------- */
+.vp-doc strong {
+    color: var(--theme-color);
+    font-weight: 700;
+}
+
+/* ---------------->> 链接 <<---------------- */
+.vp-doc a {
+    margin-left: 1px;
+    margin-right: 1px;
+    color: var(--main-purple);
+    font-weight: 700;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.vp-doc a:hover {
+    color: var(--theme-color);
+}
+
+/* ---------------->> 内联代码 <<---------------- */
+.vp-doc code {
+    background-color: var(--item-hover-bg-color);
+    color: #eb4c37;
+    font-family: var(--main-font-family);
+    font-size: .9rem;
+    border-radius: var(--radius-small);
+    margin: 0 2px;
+    padding: 2px 4px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+/* ---------------->> 代码块 <<---------------- */
+.vp-doc pre {
+    border-radius: var(--radius-small);
+    margin: 0 0 20px;
+    padding: .4em 1em .3em;
+    transition: var(--transition);
+    box-shadow: var(--box-shadow);
+}
+
+.vp-doc pre:hover {
+    box-shadow: var(--box-shadow-large);
+}
+
+.vp-doc pre code {
+    background-color: transparent;
+    color: inherit;
+}
+
+/* ---------------->> 图片 <<---------------- */
+.vp-doc img {
+    border-left: 0;
+    border-right: 0;
+    filter: var(--drop-shadow) var(--brightness);
+    border-radius: var(--radius-small);
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    max-width: 100%;
+    transition: var(--transition);
+    width: auto;
+}
+
+.vp-doc img:hover {
+    box-shadow: var(--box-shadow-large);
+}
+
+/* ---------------->> 高亮 <<---------------- */
+.vp-doc mark {
+    margin-right: 2px;
+    margin-left: 2px;
+    border-radius: var(--radius-large);
+    padding: 2px 5px 2px 5px;
+    border: 1.5px solid;
+    background: transparent;
+    color: var(--main-red);
+}
+
+/* ---------------->> 分割线 <<---------------- */
+.vp-doc hr {
+    background-color: transparent;
+    border-top: 2px dashed var(--theme-color);
+    height: 2px;
+}
+
+/* ---------------->> 目录 <<---------------- */
+.vp-doc .vp-toc {
+    padding-left: 10px !important;
+    margin-left: 20px !important;
+    background: var(--gradient-color);
+    border-radius: var(--radius-large);
+    box-shadow: var(--box-shadow);
+}
+
+/* ---------------->> 滚动条 <<---------------- */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar:hover {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: var(--radius-small);
+    background: rgba(0, 0, 0, .1);
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* ---------------->> 侧边栏 <<---------------- */
+.VPSidebar {
+    background: var(--bg-color);
+}
+
+.VPSidebarItem .item:hover {
+    background: var(--item-bg-color-blue);
+    border-radius: var(--radius-small);
+}
+
+.VPSidebarItem .item.active {
+    background: var(--item-bg-color-blue);
+    border-left: 3px solid var(--theme-color);
+}
+
+/* ---------------->> 导航栏 <<---------------- */
+.VPNav {
+    background: var(--mica-bg);
+    backdrop-filter: var(--mica-blur);
+    -webkit-backdrop-filter: var(--mica-blur);
+}
+
+/* ---------------->> 首页 Hero <<---------------- */
+.VPHero .name {
+    background: linear-gradient(120deg, var(--theme-color), var(--main-purple));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* ---------------->> 按钮 <<---------------- */
+.VPButton {
+    border-radius: var(--radius-large);
+    transition: var(--transition);
+}
+
+.VPButton:hover {
+    box-shadow: var(--box-shadow);
+}
+
+/* ---------------->> 卡片 <<---------------- */
+.VPFeature {
+    border-radius: var(--radius-large);
+    transition: var(--transition);
+    border: var(--border);
+}
+
+.VPFeature:hover {
+    box-shadow: var(--box-shadow-large);
+    transform: translateY(-2px);
+}
+
+/* ---------------->> 表格 <<---------------- */
+.vp-doc table {
+    border-radius: var(--radius-large);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.vp-doc table tr {
+    transition: background-color 0.3s ease;
+}
+
+.vp-doc table tr:nth-child(2n) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.vp-doc table tr:hover {
+    background-color: var(--item-bg-color-blue);
+}
+
+/* ---------------->> 引用块 <<---------------- */
+.vp-doc blockquote {
+    border-left: 4px solid var(--theme-color);
+    border-radius: var(--radius-small);
+    padding: 10px 20px;
+    margin: 20px 0;
+    background: var(--gradient-color);
+    box-shadow: var(--box-shadow);
+}
+
+/* ---------------->> 警告框 <<---------------- */
+.vp-doc .custom-block {
+    border-radius: var(--radius-large);
+    box-shadow: var(--box-shadow);
+}
+
+/* ---------------->> 键盘按键 <<---------------- */
+.vp-doc kbd {
+    font-family: var(--main-font-family);
+    font-weight: 700;
+    border-radius: var(--radius-small);
+    padding: 2px 6px;
+    border: 1px solid #d0d0d0;
+    box-shadow: inset 0 -1px 0 #d0d0d0;
+    background: #f5f5f5;
+}
+
+/* ---------------->> 页脚 <<---------------- */
+.VPFooter {
+    background: var(--mica-bg);
+    backdrop-filter: var(--mica-blur);
+    -webkit-backdrop-filter: var(--mica-blur);
+}
+
+/* ---------------->> 搜索框 <<---------------- */
+.VPLocalSearchBox {
+    border-radius: var(--radius-large);
+    box-shadow: var(--box-shadow-large);
+}
+
+.DocSearch-Button {
+    border-radius: var(--radius-small);
+    background: var(--mica-bg);
+    backdrop-filter: var(--mica-blur);
+    -webkit-backdrop-filter: var(--mica-blur);
+}
+
+/* ---------------->> 大纲导航 <<---------------- */
+.VPDocOutlineItem a:hover {
+    color: var(--theme-color);
+}
+
+.VPDocOutlineItem a.active {
+    color: var(--theme-color);
+    font-weight: bold;
+}

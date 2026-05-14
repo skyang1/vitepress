@@ -1,4 +1,4 @@
 import DefaultTheme from 'vitepress/theme'
-import './custom.css'
+import './onelight.css'
 
 export default DefaultTheme

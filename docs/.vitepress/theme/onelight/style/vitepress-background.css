@@ -1,0 +1,228 @@
+/* VitePress 背景样式 - 包含星空背景和装饰图片 */
+
+:root {
+    --bg-trans-color: rgba(58, 63, 74, 0.44);
+    --content-bg: rgba(15, 25, 35, 0.85);
+    --sidebar-bg: rgba(13, 17, 23, 0.9);
+}
+
+/* ---------------->> 星空背景 <<---------------- */
+html {
+    background: linear-gradient(to bottom, #0f1923, #0d1117, #050608) !important;
+}
+
+body {
+    background: transparent !important;
+    overflow-x: hidden;
+}
+
+/* ---------------->> 内容区域背景统一 <<---------------- */
+.VPContent {
+    background: var(--content-bg) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.VPSidebar {
+    background: var(--sidebar-bg) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.VPNav {
+    background: var(--sidebar-bg) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.VPLocalNav {
+    background: transparent !important;
+}
+
+.VPDoc {
+    background: transparent !important;
+}
+
+/* 星星 - 第一层 (小星星) */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    z-index: -10;
+    background: transparent;
+    transform-origin: 50vw 300vh;
+    pointer-events: none;
+    box-shadow: 
+        757px 1166px rgba(255, 255, 255, 0.8), 1554px 147px rgba(255, 255, 255, 0.9),
+        1205px 1239px rgba(255, 255, 255, 0.7), 1149px 493px rgba(255, 255, 255, 1),
+        183px 123px rgba(255, 255, 255, 0.6), 1076px 957px rgba(255, 255, 255, 0.8),
+        137px 1723px rgba(255, 255, 255, 0.9), 497px 632px rgba(255, 255, 255, 0.7),
+        1845px 1279px rgba(255, 255, 255, 1), 1021px 825px rgba(255, 255, 255, 0.6),
+        347px 583px rgba(255, 255, 255, 0.8), 689px 1230px rgba(255, 255, 255, 0.9),
+        1864px 428px rgba(255, 255, 255, 0.7), 1334px 1100px rgba(255, 255, 255, 1),
+        412px 1513px rgba(255, 255, 255, 0.6), 500px 765px rgba(255, 255, 255, 0.8),
+        1023px 325px rgba(255, 255, 255, 0.9), 1155px 1852px rgba(255, 255, 255, 0.7),
+        206px 1783px rgba(255, 255, 255, 1), 913px 355px rgba(255, 255, 255, 0.6),
+        1365px 912px rgba(255, 255, 255, 0.8), 458px 248px rgba(255, 255, 255, 0.9),
+        1520px 1745px rgba(255, 255, 255, 0.7), 1018px 50px rgba(255, 255, 255, 1),
+        267px 612px rgba(255, 255, 255, 0.6), 953px 1763px rgba(255, 255, 255, 0.8),
+        1788px 523px rgba(255, 255, 255, 0.9), 478px 1860px rgba(255, 255, 255, 0.7),
+        1295px 236px rgba(255, 255, 255, 1), 1612px 1148px rgba(255, 255, 255, 0.6),
+        1691px 667px rgba(255, 255, 255, 0.8), 893px 276px rgba(255, 255, 255, 0.9),
+        54px 987px rgba(255, 255, 255, 0.7), 1792px 83px rgba(255, 255, 255, 1),
+        656px 1312px rgba(255, 255, 255, 0.6), 1212px 1483px rgba(255, 255, 255, 0.8),
+        251px 874px rgba(255, 255, 255, 0.9), 1988px 341px rgba(255, 255, 255, 0.7),
+        888px 1563px rgba(255, 255, 255, 1), 1431px 59px rgba(255, 255, 255, 0.6),
+        333px 1912px rgba(255, 255, 255, 0.8), 1754px 811px rgba(255, 255, 255, 0.9),
+        602px 222px rgba(255, 255, 255, 0.7), 1222px 1777px rgba(255, 255, 255, 1),
+        128px 1888px rgba(255, 255, 255, 0.6), 930px 420px rgba(255, 255, 255, 0.8),
+        1670px 1450px rgba(255, 255, 255, 0.9), 400px 900px rgba(255, 255, 255, 0.7),
+        1950px 100px rgba(255, 255, 255, 1), 50px 1500px rgba(255, 255, 255, 0.6),
+        1423px 632px rgba(255, 255, 255, 0.8), 876px 1923px rgba(255, 255, 255, 0.9),
+        1823px 223px rgba(255, 255, 255, 0.7), 123px 777px rgba(255, 255, 255, 1),
+        1111px 111px rgba(255, 255, 255, 0.6), 1999px 1555px rgba(255, 255, 255, 0.8),
+        284px 1912px rgba(255, 255, 255, 0.8), 1055px 741px rgba(255, 255, 255, 0.9),
+        1734px 123px rgba(255, 255, 255, 0.7), 444px 1444px rgba(255, 255, 255, 1),
+        987px 299px rgba(255, 255, 255, 0.6), 1621px 1821px rgba(255, 255, 255, 0.8);
+    animation: animStar 12s linear infinite, animBreathe 3s ease-in-out infinite alternate;
+}
+
+/* 星星 - 第二层 (大一点的星星) */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    z-index: -10;
+    background: transparent;
+    transform-origin: 50vw 250vh;
+    pointer-events: none;
+    box-shadow: 
+        1766px 1618px rgba(255, 255, 255, 0.9), 303px 1863px rgba(255, 255, 255, 1),
+        889px 1034px rgba(255, 255, 255, 0.8), 117px 124px rgba(255, 255, 255, 0.9),
+        125px 948px rgba(255, 255, 255, 1), 1205px 461px rgba(255, 255, 255, 0.8),
+        1831px 1108px rgba(255, 255, 255, 0.9), 233px 1476px rgba(255, 255, 255, 1),
+        978px 345px rgba(255, 255, 255, 0.8), 1135px 1290px rgba(255, 255, 255, 0.9),
+        384px 756px rgba(255, 255, 255, 1), 623px 1265px rgba(255, 255, 255, 0.8),
+        1835px 592px rgba(255, 255, 255, 0.9), 512px 983px rgba(255, 255, 255, 1),
+        1558px 344px rgba(255, 255, 255, 0.8), 322px 1316px rgba(255, 255, 255, 0.9),
+        1069px 238px rgba(255, 255, 255, 1), 1756px 1715px rgba(255, 255, 255, 0.8),
+        867px 1456px rgba(255, 255, 255, 0.9), 236px 607px rgba(255, 255, 255, 1),
+        1590px 855px rgba(255, 255, 255, 0.8), 723px 73px rgba(255, 255, 255, 0.9),
+        1238px 1897px rgba(255, 255, 255, 1), 493px 382px rgba(255, 255, 255, 0.8),
+        1888px 200px rgba(255, 255, 255, 0.9), 77px 1500px rgba(255, 255, 255, 1),
+        642px 642px rgba(255, 255, 255, 0.8), 1499px 1221px rgba(255, 255, 255, 0.9),
+        1980px 800px rgba(255, 255, 255, 1), 450px 1800px rgba(255, 255, 255, 0.8),
+        288px 921px rgba(255, 255, 255, 0.9), 1341px 331px rgba(255, 255, 255, 1),
+        999px 1666px rgba(255, 255, 255, 0.8), 1631px 259px rgba(255, 255, 255, 0.9),
+        555px 1999px rgba(255, 255, 255, 1), 1801px 811px rgba(255, 255, 255, 0.8),
+        199px 682px rgba(255, 255, 255, 0.9), 731px 1198px rgba(255, 255, 255, 1),
+        1456px 456px rgba(255, 255, 255, 0.8), 1987px 1342px rgba(255, 255, 255, 0.9),
+        367px 1832px rgba(255, 255, 255, 1), 1050px 50px rgba(255, 255, 255, 0.8),
+        229px 1432px rgba(255, 255, 255, 0.9), 811px 731px rgba(255, 255, 255, 1),
+        1566px 999px rgba(255, 255, 255, 0.8), 652px 199px rgba(255, 255, 255, 0.9),
+        1732px 1888px rgba(255, 255, 255, 1), 50px 1050px rgba(255, 255, 255, 0.8),
+        1229px 432px rgba(255, 255, 255, 0.9), 1811px 1731px rgba(255, 255, 255, 1),
+        566px 1999px rgba(255, 255, 255, 0.8), 1652px 299px rgba(255, 255, 255, 0.9),
+        732px 888px rgba(255, 255, 255, 1), 150px 150px rgba(255, 255, 255, 0.8),
+        812px 1723px rgba(255, 255, 255, 0.9), 1432px 333px rgba(255, 255, 255, 1),
+        488px 876px rgba(255, 255, 255, 0.8), 1954px 1482px rgba(255, 255, 255, 0.9),
+        699px 281px rgba(255, 255, 255, 1), 1188px 1982px rgba(255, 255, 255, 0.8);
+    animation: animStar 8s linear infinite, animBreathe 4s ease-in-out infinite alternate;
+}
+
+/* 星星移动动画 */
+@keyframes animStar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(25deg);
+    }
+}
+
+/* 星星呼吸/闪烁动画 */
+@keyframes animBreathe {
+    0% { opacity: 0; }
+    10% { opacity: 0.2; }
+    20% { opacity: 0.4; }
+    30% { opacity: 0.6; }
+    40% { opacity: 0.8; }
+    50% { opacity: 1; }
+    60% { opacity: 0.8; }
+    70% { opacity: 0.6; }
+    80% { opacity: 0.4; }
+    90% { opacity: 0.2; }
+    100% { opacity: 0; }
+}
+
+/* ---------------->> 装饰图片 <<---------------- */
+/* 主界面右下角装饰 */
+.Layout::after {
+    content: '';
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 120px;
+    height: 120px;
+    background-image: url('../img/mutou2.gif');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0.9;
+    transition: opacity 0.5s ease;
+    border-radius: 10px;
+}
+
+.Layout:hover::after {
+    opacity: 1;
+}
+
+/* ---------------->> 适配浅色模式 <<---------------- */
+html:not(.dark) {
+    background: linear-gradient(to bottom, #f8f9fa, #e9ecef, #dee2e6) !important;
+}
+
+html:not(.dark) body::before,
+html:not(.dark) body::after {
+    opacity: 0.3;
+}
+
+html:not(.dark) .VPContent {
+    background: rgba(255, 255, 255, 0.85) !important;
+}
+
+html:not(.dark) .VPSidebar {
+    background: rgba(248, 249, 250, 0.9) !important;
+}
+
+html:not(.dark) .VPNav {
+    background: rgba(248, 249, 250, 0.9) !important;
+}
+
+/* ---------------->> 性能优化 <<---------------- */
+@media (prefers-reduced-motion: reduce) {
+    body::before,
+    body::after {
+        animation: none;
+    }
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+    .Layout::after {
+        width: 100px;
+        height: 100px;
+        background-size: 100px auto;
+    }
+}
