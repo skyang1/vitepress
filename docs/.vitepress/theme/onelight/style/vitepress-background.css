@@ -19,8 +19,6 @@ body {
 /* ---------------->> 内容区域背景统一 <<---------------- */
 .VPContent {
     background: var(--content-bg) !important;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
 }
 
 .VPSidebar {
