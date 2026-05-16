@@ -65,9 +65,18 @@ export default defineConfig({
 
       '/llm/': [
         {
-          text: 'LLM 相关',
           collapsed: false,
           items: [
+            {
+              text: '准备工作',
+              collapsed: true,
+              items: [
+                {
+                  text: '环境配置',
+                  link: '/llm/minimind/01_环境配置'
+                },
+              ]
+            },
           ]
         }
       ]
