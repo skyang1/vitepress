@@ -68,7 +68,7 @@ export default defineConfig({
           collapsed: false,
           items: [
             {
-              text: '准备工作',
+              text: 'Minimind',
               collapsed: true,
               items: [
                 {
